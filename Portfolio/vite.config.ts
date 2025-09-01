@@ -10,7 +10,6 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react()],
-    base: "/Portfolio-Web/", 
 
   resolve: {
     alias: {
