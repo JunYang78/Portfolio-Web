@@ -1,19 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
-
+import  useTypingEffect from "@/components/ui/Typing";
 
 const Index = () => {
+
+  const intro = "Hi, I'm ";
+  const name = "Jun Yang";
+  const { displayed, done } = useTypingEffect(intro + name, 100);
+
   return (
     <main className="pt-20 min-h-screen">
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="max-w-4xl">
           <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Hi, I'm{" "}
+
+            {displayed.slice(0, intro.length)}
+
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Jun Yang
+              {displayed.slice(intro.length)}
             </span>
+
+            <span className={done ? "animate-blink" : ""}>|</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-3xl">
@@ -30,7 +39,7 @@ const Index = () => {
             </Button>
             
             <Button variant="nav" size="lg" asChild>
-              <Link to="/contact">Get In Touch</Link>
+              <Link to="/experience">Get In Touch</Link>
             </Button>
           </div>
           

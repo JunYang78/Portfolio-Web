@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, MapPin, Calendar, Github, Linkedin, Twitter } from "lucide-react";
 
-const Contact = () => {
+const Experience = () => {
   return (
     <main className="pt-20 min-h-screen">
       <section className="max-w-4xl mx-auto px-6 py-16">
@@ -115,4 +115,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Experience;

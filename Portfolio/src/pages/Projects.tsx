@@ -5,20 +5,18 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Autoclicker App",
       description: "A modern e-commerce solution built with React and Node.js, featuring real-time inventory management and secure payment processing.",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      github: "https://github.com",
-      demo: "https://demo.example.com",
+      tech: ["Python", "tkinter", "keyboard", "pynput"],
+      github: "https://github.com/JunYang78/Autoclicker",
       status: "Completed"
     },
     {
-      title: "Task Management App",
+      title: "Macro Recorder",
       description: "A collaborative task management application with real-time updates, team collaboration features, and advanced filtering.",
       tech: ["Next.js", "TypeScript", "Prisma", "Socket.io"],
       github: "https://github.com",
-      demo: "https://demo.example.com",
-      status: "In Progress"
+      status: "Completed"
     },
     {
       title: "Data Visualization Dashboard",
@@ -38,12 +36,11 @@ const Projects = () => {
             My Projects
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            A collection of projects I've worked on, showcasing my skills in web development, 
-            design, and problem-solving. Each project represents a unique challenge and learning experience.
+            A collection of projects I've worked on.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="hover:shadow-medium transition-smooth border-border">
               <CardHeader>
@@ -82,12 +79,14 @@ const Projects = () => {
                     Code
                   </a>
                 </Button>
-                <Button variant="nav-primary" size="sm" asChild>
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4" />
-                    Demo
-                  </a>
-                </Button>
+                {project.demo && ( 
+                  <Button variant="nav-primary" size="sm" asChild>
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4" />
+                      Demo
+                    </a>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
@@ -102,7 +101,7 @@ const Projects = () => {
             Check out my GitHub for more projects and contributions.
           </p>
           <Button variant="nav-primary" size="lg" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/JunYang78" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4" />
               View All Projects
             </a>

@@ -7,8 +7,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FullScreenLoader from "@/components/FullScreenLoader";
 import Index from "./pages/Index";
+import Constellation from "./pages/Constellation";
 import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
+import Experience from "./pages/Experience";
 import NotFound from "./pages/NotFound";
 import PageRipple from "./components/ui/Ripple";
 
@@ -26,17 +27,18 @@ const App = () => {
           <FullScreenLoader onComplete={() => setShowLoader(false)} />
         )} */}
         <BrowserRouter>
-        <PageRipple>
+        {/* <PageRipple> */}
           <div className="dark min-h-screen bg-gradient-bg">
             <Navbar />
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/constellation" element={<Constellation />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/experience" element={<Experience />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
-        </PageRipple>
+        {/* </PageRipple> */}
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

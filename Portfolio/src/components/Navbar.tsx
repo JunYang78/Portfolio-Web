@@ -21,6 +21,14 @@ const Navbar = () => {
               size="nav" 
               asChild
             >
+              <Link to="/constellation">Cool Stuff</Link>
+            </Button>
+
+            <Button 
+              variant="nav-primary" 
+              size="nav" 
+              asChild
+            >
               <Link to="/projects">Projects</Link>
             </Button>
             
@@ -29,7 +37,7 @@ const Navbar = () => {
               size="nav" 
               asChild
             >
-              <Link to="/contact">Contact</Link>
+              <Link to="/experience">Experience</Link>
             </Button>
           </div>
         </div>

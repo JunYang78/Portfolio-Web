@@ -84,6 +84,10 @@ export default {
 				"0%": { transform: "scale(0)", opacity: "0.6" },
 				"100%": { transform: "scale(24)", opacity: "0" },
 				},
+				blink: {
+				'0%, 70%': { opacity: '1' },
+				'71%, 100%': { opacity: '0' },
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -102,6 +106,7 @@ export default {
 				}
 			},
 			animation: {
+				blink: 'blink 1.5s step-start infinite',
 				ripple: "ripple 1s linear",
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
